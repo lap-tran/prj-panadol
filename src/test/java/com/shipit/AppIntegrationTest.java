@@ -24,7 +24,7 @@ public class AppIntegrationTest {
         });
         //recorder.start();
 
-        FirefoxBinary firefox = new FirefoxBinary();
+        FirefoxBinary firefox = new FirefoxBinary(new File(System.getProperty("webdriver.firefox.bin")));
         if(System.getProperty("DISPLAY") != null) {
             firefox.setEnvironmentProperty("DISPLAY", System.getProperty("DISPLAY"));
         }
