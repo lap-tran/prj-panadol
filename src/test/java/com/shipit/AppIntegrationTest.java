@@ -20,10 +20,12 @@ public class AppIntegrationTest {
                 recordScreen("");
             }
         });
-        recorder.start();
+        //recorder.start();
 
         // Create a new instance of the Firefox driver
         WebDriver driver = new FirefoxDriver();
+
+        System.out.println("Property DISPLAY: " + System.getProperty("DISPLAY"));
 
         //Launch the Online Store Website
         driver.get("http://www.store.demoqa.com");
