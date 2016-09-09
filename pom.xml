@@ -59,7 +59,7 @@
                     <systemPropertyVariables>
                         <DISPLAY>${xvfb.display}</DISPLAY>
                         <webdriver.firefox.bin>${bamboo_capability_firefox_45}/firefox</webdriver.firefox.bin>
-                        <javacpp.platform.dependencies>true</javacpp.platform.dependencies>
+                        <javacpp.platform>linux-x86_64</javacpp.platform>
                     </systemPropertyVariables>
                     <includes>
                         <include>**/*IntegrationTest.java</include>
