@@ -48,7 +48,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <DISPLAY>${xvfb.display}</DISPLAY>
-                        <webdriver.firefox.bin>${bamboo_capability_firefox_45}/firefox</webdriver.firefox.bin>
+                        <!--<webdriver.firefox.bin>${bamboo_capability_firefox_45}/firefox</webdriver.firefox.bin>-->
                     </systemPropertyVariables>
                     <includes>
                         <include>**/*IntegrationTest.java</include>
