@@ -14,6 +14,8 @@ import java.io.File;
 public class AppIntegrationTest {
     @Test
     public void browseSite() throws InterruptedException {
+        System.out.println("Property DISPLAY: " + System.getProperty("DISPLAY"));
+
         Thread recorder = (new Thread() {
             @Override
             public synchronized void run() {
@@ -24,8 +26,6 @@ public class AppIntegrationTest {
 
         // Create a new instance of the Firefox driver
         WebDriver driver = new FirefoxDriver();
-
-        System.out.println("Property DISPLAY: " + System.getProperty("DISPLAY"));
 
         //Launch the Online Store Website
         driver.get("http://www.store.demoqa.com");
