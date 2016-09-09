@@ -76,9 +76,9 @@ public class AppIntegrationTest {
             grabber.stop();
             recorder.stop();
         } catch (FrameRecorder.Exception e) {
-            throw new RuntimeIOException(e);
+            throw new RuntimeException(e);
         } catch (FrameGrabber.Exception e) {
-            throw new RuntimeIOException(e);
+            throw new RuntimeException(e);
         }
     }
 }
