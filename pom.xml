@@ -47,7 +47,7 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <configuration>
                     <systemPropertyVariables>
-                        <DISPLAY>${xvfb.display}</DISPLAY>
+                        <DISPLAY>:20</DISPLAY>
                         <webdriver.firefox.bin>${bamboo_capability_firefox_38_0}/firefox</webdriver.firefox.bin>
                     </systemPropertyVariables>
                     <includes>
