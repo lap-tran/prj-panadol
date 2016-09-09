@@ -22,6 +22,7 @@ public class AppIntegrationTest {
                 recordScreen("");
             }
         });
+        recorder.setContextClassLoader(Thread.currentThread().getContextClassLoader());
         recorder.start();
 
         FirefoxBinary firefox = new FirefoxBinary(new File(System.getProperty("webdriver.firefox.bin")));
