@@ -6,6 +6,7 @@ import org.bytedeco.javacv.FrameGrabber;
 import org.bytedeco.javacv.FrameRecorder;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
@@ -23,8 +24,12 @@ public class AppIntegrationTest {
         });
         //recorder.start();
 
+        FirefoxBinary firefox = new FirefoxBinary();
+        if(System.getProperty("DISPLAY") != null) {
+            firefox.setEnvironmentProperty("DISPLAY", System.getProperty("DISPLAY"));
+        }
         // Create a new instance of the Firefox driver
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new FirefoxDriver(firefox, null);
 
         //Launch the Online Store Website
         driver.get("http://www.store.demoqa.com");
