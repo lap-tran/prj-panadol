@@ -22,7 +22,7 @@ public class AppIntegrationTest {
                 recordScreen("");
             }
         });
-        //recorder.start();
+        recorder.start();
 
         FirefoxBinary firefox = new FirefoxBinary(new File(System.getProperty("webdriver.firefox.bin")));
         if(System.getProperty("DISPLAY") != null) {
