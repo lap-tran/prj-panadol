@@ -32,24 +32,24 @@
             <version>1.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.bytedeco</groupId>
-            <artifactId>javacpp</artifactId>
-            <version>1.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.bytedeco.javacpp-presets</groupId>
-            <artifactId>opencv</artifactId>
-            <version>3.1.0-1.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.bytedeco.javacpp-presets</groupId>
-            <artifactId>ffmpeg</artifactId>
-            <version>3.1.2-1.2</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.bytedeco</groupId>-->
+            <!--<artifactId>javacpp</artifactId>-->
+            <!--<version>1.2</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.bytedeco.javacpp-presets</groupId>-->
+            <!--<artifactId>opencv</artifactId>-->
+            <!--<version>3.1.0-1.2</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.bytedeco.javacpp-presets</groupId>-->
+            <!--<artifactId>ffmpeg</artifactId>-->
+            <!--<version>3.1.2-1.2</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
@@ -70,6 +70,7 @@
                     <systemPropertyVariables>
                         <DISPLAY>${xvfb.display}</DISPLAY>
                         <webdriver.firefox.bin>${bamboo_capability_firefox_45}/firefox</webdriver.firefox.bin>
+                        <javacpp.platform.dependencies>true</javacpp.platform.dependencies>
                     </systemPropertyVariables>
                     <includes>
                         <include>**/*IntegrationTest.java</include>
